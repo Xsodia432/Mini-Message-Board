@@ -19,5 +19,5 @@ app.use("/", indexRouter);
 app.use("/new", message);
 
 app.use("/{*splat}", notFoundRouter);
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Express Host Listening ${PORT}`));
