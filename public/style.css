@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(9, 9, 11);
+  font-family: Roboto;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  gap: 15px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  border: 1px solid rgb(0, 27, 24);
+  padding: 15px;
+  border-radius: 10px;
+  gap: 10px;
+}
+nav {
+  width: 500px;
+  margin: 20px 0px 20px 0px;
+  padding: 20px 15px 15px 15px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  background-color: rgb(10, 26, 27);
+  border: 1px solid rgb(0, 27, 24);
+}
+nav > ul {
+  display: flex;
+  gap: 20px;
+  font-weight: 900;
+}
+nav > ul > li > a {
+  color: rgb(94, 221, 158);
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.content {
+  padding: 15px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.content > a > div {
+  background-color: rgb(14, 14, 15);
+  border: 1px solid rgb(0, 27, 24);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.content > a > div > :nth-child(2) {
+  color: rgb(209, 207, 207);
+  font-style: italic;
+}
+form > input {
+  padding: 10px;
+
+  border-radius: 10px;
+  background-color: rgb(14, 14, 15);
+  border: 1px solid rgb(0, 27, 24);
+  color: white;
+}
+form > button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: rgb(13, 148, 136);
+  color: white;
+}
+form > textarea {
+  max-width: auto;
+  resize: none;
+  height: 150px;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: rgb(14, 14, 15);
+  border: 1px solid rgb(0, 27, 24);
+  color: white;
+}
+h3 {
+  color: red;
+}

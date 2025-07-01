@@ -1,0 +1,11 @@
+<h2>New Message</h2>
+<form action="/create" method="POST">
+  <% if(error){%>
+  <h3><%= error %></h3>
+  <%}%>
+  <label for="fullName">Full Name:</label>
+  <input placeholder="John Doe" type="text" name="fullName" id="fullName" />
+  <label for="message">Message:</label>
+  <textarea placeholder="Hello" name="message" id="message"></textarea>
+  <button type="submit">Submit</button>
+</form>
