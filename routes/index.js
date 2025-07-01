@@ -1,4 +1,5 @@
 const { Router } = require("express");
+const { format } = require("date-fns");
 
 const indexRouter = Router();
 
@@ -7,13 +8,13 @@ const messages = [
     id: 1,
     text: "Hi there!",
     user: "Amando",
-    added: new Date(),
+    added: format(new Date(), "MMMM, dd yyyy HH:mm"),
   },
   {
     id: 2,
     text: "Hello World!",
     user: "Charles",
-    added: new Date(),
+    added: format(new Date(), "MMMM, dd yyyy HH:mm"),
   },
 ];
 
@@ -37,7 +38,7 @@ indexRouter.post("/create", checkEmpty, (req, res) => {
     id: messages.length + 1,
     text: req.body.message,
     user: req.body.fullName,
-    added: new Date(),
+    added: format(new Date(), "MMMM, dd yyyy HH:mm"),
   });
   res.redirect("/");
 });
@@ -45,7 +46,7 @@ indexRouter.post("/create", checkEmpty, (req, res) => {
 indexRouter.get("/message/:id", (req, res) => {
   const { id } = req.params;
   const userData = messages.find((item) => item.id === Number(id));
-  console.log(userData);
+
   res.render("index", { userData: userData });
 });
 
